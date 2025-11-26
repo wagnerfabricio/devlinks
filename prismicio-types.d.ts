@@ -70,6 +70,7 @@ type ContentRelationshipFieldWithData<
 }[Exclude<TCustomType[number], string>["id"]];
 
 type HomeDocumentDataSlicesSlice =
+  | CustomToggleSlice
   | SocialIconsSlice
   | CtaListSlice
   | ProfileAvatarSlice;
@@ -180,6 +181,52 @@ type CtaListSliceVariation = CtaListSliceDefault;
 export type CtaListSlice = prismic.SharedSlice<
   "cta_list",
   CtaListSliceVariation
+>;
+
+/**
+ * Primary content in *CustomToggle → Default → Primary*
+ */
+export interface CustomToggleSliceDefaultPrimary {
+  /**
+   * show_theme_toggle field in *CustomToggle → Default → Primary*
+   *
+   * - **Field Type**: Boolean
+   * - **Placeholder**: *None*
+   * - **Default Value**: true
+   * - **API ID Path**: custom_toggle.default.primary.show_theme_toggle
+   * - **Documentation**: https://prismic.io/docs/fields/boolean
+   */
+  show_theme_toggle: prismic.BooleanField;
+}
+
+/**
+ * Default variation for CustomToggle Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CustomToggleSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<CustomToggleSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *CustomToggle*
+ */
+type CustomToggleSliceVariation = CustomToggleSliceDefault;
+
+/**
+ * CustomToggle Shared Slice
+ *
+ * - **API ID**: `custom_toggle`
+ * - **Description**: CustomToggle
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type CustomToggleSlice = prismic.SharedSlice<
+  "custom_toggle",
+  CustomToggleSliceVariation
 >;
 
 /**
@@ -344,6 +391,10 @@ declare module "@prismicio/client" {
       CtaListSliceDefaultPrimary,
       CtaListSliceVariation,
       CtaListSliceDefault,
+      CustomToggleSlice,
+      CustomToggleSliceDefaultPrimary,
+      CustomToggleSliceVariation,
+      CustomToggleSliceDefault,
       ProfileAvatarSlice,
       ProfileAvatarSliceDefaultPrimary,
       ProfileAvatarSliceVariation,

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "@/providers/theme-provider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -20,9 +21,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} antialiased`}>
-        <main className="w-full min-h-screen py-14 bg-[url('/bg-mobile.webp')] md:bg-[url('/bg-desktop.webp')] bg-cover bg-center">
-          {children}
-        </main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className="w-full min-h-screen py-14 bg-[url('/assets/images/bg-mobile-light.webp')] md:bg-[url('/assets/images/bg-desktop-light.webp')] dark:bg-[url('/assets/images/bg-mobile.webp')] md:dark:bg-[url('/assets/images/bg-desktop.webp')] bg-cover bg-center">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

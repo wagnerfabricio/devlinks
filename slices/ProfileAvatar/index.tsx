@@ -22,7 +22,9 @@ const ProfileAvatar: FC<ProfileAvatarProps> = ({ slice }) => {
     >
       <div className="w-28 h-28 rounded-full overflow-hidden border-2 border-stroke">
         <Image
-          src={primary.avatar_image.url || "/profile-default.webp"}
+          src={
+            primary.avatar_image.url || "/assets/images/profile-default.webp"
+          }
           alt={primary.avatar_image.alt || primary.username || "avatar"}
           width={112}
           height={112}

@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 
 export const components = {
   cta_list: dynamic(() => import("./CtaList")),
+  custom_toggle: dynamic(() => import("./CustomToggle")),
   profile_avatar: dynamic(() => import("./ProfileAvatar")),
   social_icons: dynamic(() => import("./SocialLinks")),
 };

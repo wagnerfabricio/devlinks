@@ -1,0 +1,28 @@
+{
+  "id": "custom_toggle",
+  "type": "SharedSlice",
+  "name": "CustomToggle",
+  "description": "CustomToggle",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "show_theme_toggle": {
+          "type": "Boolean",
+          "config": {
+            "label": "show_theme_toggle",
+            "placeholder_false": "false",
+            "placeholder_true": "true",
+            "default_value": true
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}
