@@ -28,6 +28,7 @@ const ProfileAvatar: FC<ProfileAvatarProps> = ({ slice }) => {
           alt={primary.avatar_image.alt || primary.username || "avatar"}
           width={112}
           height={112}
+          loading="eager"
         />
       </div>
       <h1 className="text-base">{primary.username}</h1>

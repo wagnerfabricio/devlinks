@@ -7,10 +7,10 @@
   /* ---------------------------- CUSTOM VARIABLES ---------------------------- */
   --color-text: rgba(0, 0, 0, 1);
   --color-text-inverted: rgba(255, 255, 255, 1);
-  --color-surface-5: rgba(0, 0, 0, 0.05);
-  --color-surface-10: rgba(0, 0, 0, 0.10);
-  --color-highlight-20: rgba(0, 0, 0, 0.20);
-  --color-stroke: rgba(0, 0, 0, 0.50);
+  --color-surface-5: rgba(0, 0, 0, .05);
+  --color-surface-10: rgba(0, 0, 0, .1);
+  --color-highlight: rgba(0, 0, 0, .1);
+  --color-stroke: rgba(0, 0, 0, .5);
 
   /* ---------------------------- SHADCN VARIABLES ---------------------------- */
   --radius: 0.625rem;
@@ -54,7 +54,7 @@
   --color-text-inverted: var(--color-text-inverted);
   --color-surface-5: var(--color-surface-5);
   --color-surface-10: var(--color-surface-10);
-  --color-highlight-20: var(--color-highlight-20);
+  --color-highlight: var(--color-highlight);
   --color-stroke: var(--color-stroke);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -102,10 +102,10 @@
   /* ---------------------------- CUSTOM VARIABLES ---------------------------- */
   --color-text: rgba(255, 255, 255, 1);
   --color-text-inverted: rgba(0, 0, 0, 1);
-  --color-surface-5: rgba(255, 255, 255, 0.05);
-  --color-surface-10: rgba(255, 255, 255, 0.10);
-  --color-highlight-20: rgba(255, 255, 255, 0.20);
-  --color-stroke: rgba(255, 255, 255, 0.50);
+  --color-surface-5: rgba(255, 255, 255, .05);
+  --color-surface-10: rgba(255, 255, 255, .1);
+  --color-highlight: rgba(255, 255, 255, .2);
+  --color-stroke: rgba(255, 255, 255, .5);
 
   /* ---------------------------- SHADCN VARIABLES ---------------------------- */
   --background: oklch(0.145 0 0);

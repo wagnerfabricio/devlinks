@@ -1,0 +1,20 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"text_footer": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "In ut ut duis voluptate adipisicing et eiusmod qui proident aliquip anim ullamco. Dolore duis officia laboris magna."
+						}
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

@@ -18,7 +18,6 @@ export type CustomToggleProps = SliceComponentProps<Content.CustomToggleSlice>;
  */
 const CustomToggle: FC<CustomToggleProps> = ({ slice }) => {
   const { theme, setTheme } = useTheme();
-  console.log("🚀 ~ CustomToggle ~ theme:", theme);
   const {
     primary: { show_theme_toggle },
     slice_type,

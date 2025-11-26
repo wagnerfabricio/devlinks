@@ -70,6 +70,7 @@ type ContentRelationshipFieldWithData<
 }[Exclude<TCustomType[number], string>["id"]];
 
 type HomeDocumentDataSlicesSlice =
+  | TextFooterSlice
   | CustomToggleSlice
   | SocialIconsSlice
   | CtaListSlice
@@ -362,6 +363,51 @@ export type SocialIconsSlice = prismic.SharedSlice<
   SocialIconsSliceVariation
 >;
 
+/**
+ * Primary content in *FooterText → Default → Primary*
+ */
+export interface TextFooterSliceDefaultPrimary {
+  /**
+   * Text Footer field in *FooterText → Default → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: @Copyright all rights reserved
+   * - **API ID Path**: text_footer.default.primary.text_footer
+   * - **Documentation**: https://prismic.io/docs/fields/rich-text
+   */
+  text_footer: prismic.RichTextField;
+}
+
+/**
+ * Default variation for FooterText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TextFooterSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<TextFooterSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *FooterText*
+ */
+type TextFooterSliceVariation = TextFooterSliceDefault;
+
+/**
+ * FooterText Shared Slice
+ *
+ * - **API ID**: `text_footer`
+ * - **Description**: TextFooter
+ * - **Documentation**: https://prismic.io/docs/slices
+ */
+export type TextFooterSlice = prismic.SharedSlice<
+  "text_footer",
+  TextFooterSliceVariation
+>;
+
 declare module "@prismicio/client" {
   interface CreateClient {
     (
@@ -404,6 +450,10 @@ declare module "@prismicio/client" {
       SocialIconsSliceDefaultPrimary,
       SocialIconsSliceVariation,
       SocialIconsSliceDefault,
+      TextFooterSlice,
+      TextFooterSliceDefaultPrimary,
+      TextFooterSliceVariation,
+      TextFooterSliceDefault,
     };
   }
 }

@@ -7,4 +7,5 @@ export const components = {
   custom_toggle: dynamic(() => import("./CustomToggle")),
   profile_avatar: dynamic(() => import("./ProfileAvatar")),
   social_icons: dynamic(() => import("./SocialLinks")),
+  text_footer: dynamic(() => import("./FooterText")),
 };

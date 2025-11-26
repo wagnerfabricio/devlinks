@@ -24,7 +24,10 @@ const CtaList: FC<CtaListProps> = ({ slice }) => {
       data-slice-variation={variation}
     >
       {ctas?.map((cta) => (
-        <CustomLink href={cta.url} key={cta.key}>
+        <CustomLink
+          href={cta?.link_type === "Web" ? cta.url : undefined}
+          key={cta.key}
+        >
           {cta.text}
         </CustomLink>
       ))}
