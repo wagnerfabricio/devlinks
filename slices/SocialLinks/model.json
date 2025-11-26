@@ -1,0 +1,49 @@
+{
+  "type": "SharedSlice",
+  "id": "social_icons",
+  "name": "SocialLinks",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Displays a horizontal list of social media icon links.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "social_link": {
+          "type": "Group",
+          "config": {
+            "label": "social link",
+            "repeat": true,
+            "fields": {
+              "icon": {
+                "type": "Image",
+                "config": {
+                  "label": "icon",
+                  "constraint": {
+                    "width": 24,
+                    "height": 24
+                  },
+                  "thumbnails": []
+                }
+              },
+              "social_link": {
+                "type": "Link",
+                "config": {
+                  "label": "link",
+                  "placeholder": "Linkedin",
+                  "select": null,
+                  "allowTargetBlank": true,
+                  "allowText": true,
+                  "repeat": false
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

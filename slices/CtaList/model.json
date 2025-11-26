@@ -1,0 +1,26 @@
+{
+  "type": "SharedSlice",
+  "id": "cta_list",
+  "name": "CtaList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Displays a list of CTA buttons with customizable text and links.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "ctas": {
+          "type": "Link",
+          "config": {
+            "label": "CTAs",
+            "allowText": true,
+            "repeat": true,
+            "select": null
+          }
+        }
+      }
+    }
+  ]
+}

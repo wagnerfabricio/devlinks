@@ -1,0 +1,29 @@
+{
+  "type": "SharedSlice",
+  "id": "profile_avatar",
+  "name": "ProfileAvatar",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "description": "Standard profile avatar with username below the image.",
+      "version": "initial",
+      "imageUrl": "",
+      "docURL": "...",
+      "primary": {
+        "avatar_image": {
+          "type": "Image",
+          "config": {
+            "label": "Avatar Image"
+          }
+        },
+        "username": {
+          "type": "Text",
+          "config": {
+            "label": "Username or Handle"
+          }
+        }
+      }
+    }
+  ]
+}
