@@ -1,11 +1,10 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { Switch } from "@radix-ui/react-switch";
 import { useTheme } from "next-themes";
 import { SunIcon, MoonStarsIcon } from "@phosphor-icons/react";
 
-function ThemeSwitch() {
+export const ThemeSwitch = () => {
   const { theme, setTheme } = useTheme();
 
   const handleThemeChange = (enabled: boolean) => {
@@ -22,10 +21,7 @@ function ThemeSwitch() {
     >
       <span className="sr-only">Toggle theme</span>
       <span
-        className={cn(
-          isLight ? "translate-x-10" : "-translate-x-1",
-          "-translate-y-1/2 top-1/2 pointer-events-none absolute inline-block h-8 w-8 transform rounded-full bg-text shadow ring-0 transition-transform duration-700 ease-in-out"
-        )}
+        className={`${isLight ? "translate-x-10" : "-translate-x-1"} -translate-y-1/2 top-1/2 pointer-events-none absolute inline-block h-8 w-8 transform rounded-full bg-text shadow ring-0 transition-transform duration-700 ease-in-out`}
       >
         <span className="absolute inset-0 flex h-full w-full items-center justify-center text-text-inverted">
           {isLight ? <SunIcon size={16} /> : <MoonStarsIcon size={16} />}
@@ -33,6 +29,4 @@ function ThemeSwitch() {
       </span>
     </Switch>
   );
-}
-
-export default ThemeSwitch;
+};

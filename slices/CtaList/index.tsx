@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import CustomLink from "@/components/ui/custom-link";
+import { CustomLink } from "@/components/ui/CustomLink";
 
 /**
  * Props for `CtaList`.

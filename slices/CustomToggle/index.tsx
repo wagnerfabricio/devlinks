@@ -3,10 +3,8 @@
 import { FC } from "react";
 import { Content } from "@prismicio/client";
 import { SliceComponentProps } from "@prismicio/react";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
 import { useTheme } from "next-themes";
-import ThemeSwitch from "@/components/ui/theme-switch";
+import { ThemeSwitch } from "@/components/ui/ThemeSwitch";
 
 /**
  * Props for `CustomToggle`.
